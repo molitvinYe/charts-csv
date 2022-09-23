@@ -1,10 +1,8 @@
-import React from 'react'
-import PageLayout from '../components/layouts/PageLayout'
+import React from "react";
+import PageLayout from "../components/layouts/PageLayout";
 
 const LineChartPage = () => {
-  return (
-    <PageLayout>LineChartPage</PageLayout>
-  )
-}
+  return <PageLayout>LineChartPage</PageLayout>;
+};
 
-export default LineChartPage
+export default LineChartPage;
