@@ -1,0 +1,8 @@
+.header {
+  background-color: aliceblue;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+}

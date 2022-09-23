@@ -4,6 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import styles from "./DropDown.module.css";
 
 const DropDown = () => {
   const [parameter, setParameter] = React.useState(CHART_PARAMETERS[0]);
@@ -13,7 +14,7 @@ const DropDown = () => {
   };
 
   return (
-    <div>
+    <div className={styles.dropDown}>
       <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="demo-simple-select-standard-label">
           Parameter

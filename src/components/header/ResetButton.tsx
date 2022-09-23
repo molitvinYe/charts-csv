@@ -5,6 +5,7 @@ const ResetButton = () => {
   const resetFilters = () => {
     console.log("reset");
   };
+
   return (
     <Button variant="contained" onClick={resetFilters}>
       Reset
