@@ -1,9 +1,13 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import { dataSlice } from "../../store/reducers/DataSlice";
+import { useAppDispatch } from "../../hooks/redux";
 
 const ResetButton = () => {
+  const dispatch = useAppDispatch();
+
   const resetFilters = () => {
-    console.log("reset");
+    dispatch(dataSlice.actions.resetFilters());
   };
 
   return (
