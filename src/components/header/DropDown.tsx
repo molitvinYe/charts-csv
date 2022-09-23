@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { CHART_PARAMETERS } from "../../store/constants";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
