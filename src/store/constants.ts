@@ -1,0 +1,1 @@
+export const CHART_PARAMETERS = ["markdown", "revenues", "margin"]

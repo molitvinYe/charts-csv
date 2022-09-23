@@ -1,7 +1,12 @@
 import React from "react";
+import DropDown from "./DropDown";
 
 const Header = () => {
-  return <header>Header</header>;
+  return (
+    <header>
+      <DropDown />
+    </header>
+  );
 };
 
 export default Header;
