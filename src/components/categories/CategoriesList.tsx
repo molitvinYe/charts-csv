@@ -7,7 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { dataSlice } from "../../store/reducers/DataSlice";
-import Typography from "@mui/material/Typography";
+import { COLORS } from "../../store/constants";
 import styles from "./CategoriesList.module.css";
 
 const CategoriesList = () => {
@@ -35,6 +35,7 @@ const CategoriesList = () => {
       >
         {categories.all.map((value) => {
           const labelId = `checkbox-list-label-${value}`;
+          const isChecked = categories.filter.includes(value);
 
           return (
             <ListItem key={value} disablePadding>
@@ -46,13 +47,23 @@ const CategoriesList = () => {
                 <ListItemIcon>
                   <Checkbox
                     edge="start"
-                    checked={categories.filter.includes(value)}
+                    checked={isChecked}
                     tabIndex={-1}
                     disableRipple
                     inputProps={{ "aria-labelledby": labelId }}
                   />
                 </ListItemIcon>
                 <ListItemText id={labelId} primary={`${value}`} />
+                <div
+                  style={{
+                    height: "10px",
+                    width: "10px",
+                    backgroundColor: `${
+                      COLORS[categories.all.indexOf(value) % COLORS.length]
+                    }`,
+                    filter: `grayscale(${isChecked ? "0" : "100%"})`,
+                  }}
+                ></div>
               </ListItemButton>
             </ListItem>
           );
