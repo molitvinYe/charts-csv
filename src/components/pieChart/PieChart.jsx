@@ -76,17 +76,8 @@ const PieChart = () => {
   }, [pieData, categories])
 
   const handleToggle = (event) => {
-    const path = event.target
-    const value = path.dataset.text
-    const checked = [...categories.filter];
-
-    if (checked.includes(value)) {
-      checked.splice(checked.indexOf(value), 1);
-    } else {
-      checked.push(value);
-    }
-
-    dispatch(dataSlice.actions.setCategories(checked));
+    const value = event.target.dataset.text
+    dispatch(dataSlice.actions.setCategories(value));
   };
 
   const hoverHendler = (event) => {
