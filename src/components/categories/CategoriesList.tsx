@@ -15,15 +15,7 @@ const CategoriesList = () => {
   const { categories } = useAppSelector((state) => state.dataReducer);
 
   const handleToggle = (value: string) => () => {
-    const checked = [...categories.filter];
-
-    if (checked.includes(value)) {
-      checked.splice(checked.indexOf(value), 1);
-    } else {
-      checked.push(value);
-    }
-
-    dispatch(dataSlice.actions.setCategories(checked));
+    dispatch(dataSlice.actions.setCategories(value));
   };
 
   return (

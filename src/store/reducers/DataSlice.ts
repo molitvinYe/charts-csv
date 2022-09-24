@@ -81,17 +81,25 @@ export const dataSlice = createSlice({
       }
     },
 
-    setCategories(state, action: PayloadAction<string[]>) {
+    setCategories(state, action: PayloadAction<string>) {
+      const checked = [...state.categories.filter];
+
+      if (checked.includes(action.payload)) {
+        checked.splice(checked.indexOf(action.payload), 1);
+      } else {
+        checked.push(action.payload);
+      }
+
       state.categories = {
         ...state.categories,
-        filter: action.payload
+        filter: checked
       }
     },
 
     resetFilters(state) {
       state.dateRange = {
-        all: state.categories.all,
-        filter: state.categories.all
+        all: state.dateRange.all,
+        filter: state.dateRange.all
       }
       state.categories = {
         all: state.categories.all,
