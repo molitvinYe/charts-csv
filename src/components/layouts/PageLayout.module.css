@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  background-color: rgb(192, 255, 253);
+  flex: 1 1 auto;
+  overflow: auto;
+}
