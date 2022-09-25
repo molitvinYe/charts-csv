@@ -1,16 +1,13 @@
 import React from "react";
 import PageLayout from "../components/layouts/PageLayout";
-import CategoriesList from "../components/categories/CategoriesList";
-import PieChart from "../components/pieChart/PieChart";
-import Row from "../components/ui/Row";
+import CategoriesList from "../components/lists/CategoriesList";
+import PieChart from "../components/charts/PieChart";
 
 const PieChartPage = () => {
   return (
     <PageLayout>
-      <Row>
-        <CategoriesList />
-        <PieChart />
-      </Row>
+      <CategoriesList />
+      <PieChart />
     </PageLayout>
   );
 };

@@ -35,9 +35,7 @@ const PieChart = () => {
       })
     }, initialPieData))
 
-  }, [csv, parameter])
-
-
+  }, [csv, parameter, categories.all, dateRange.filter])
 
   useEffect(() => {
     const w = 500;

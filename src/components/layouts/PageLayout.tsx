@@ -9,7 +9,9 @@ const PageLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <Header />
 
       <main className={styles.main}>
-        <Container maxWidth="lg">{children}</Container>
+        <Container maxWidth="lg">
+          <div className={styles.row}>{children}</div>
+        </Container>
       </main>
     </div>
   );
