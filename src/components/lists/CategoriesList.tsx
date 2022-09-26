@@ -8,7 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { dataSlice } from "../../store/reducers/DataSlice";
 import { COLORS } from "../../store/constants";
-import styles from "./CategoriesList.module.css";
+import styles from "./List.module.css";
 
 const CategoriesList = () => {
   const dispatch = useAppDispatch();

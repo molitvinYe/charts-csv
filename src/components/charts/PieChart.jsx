@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import * as d3 from "d3";
-import styles from "./PieChart.module.css"
+import styles from "./Charts.module.css"
 import { useAppSelector, useAppDispatch } from "../../hooks/redux";
 import { dataSlice } from "../../store/reducers/DataSlice";
 import { COLORS } from "../../store/constants";
@@ -35,9 +35,7 @@ const PieChart = () => {
       })
     }, initialPieData))
 
-  }, [csv, parameter])
-
-
+  }, [csv, parameter, categories.all, dateRange.filter])
 
   useEffect(() => {
     const w = 500;
