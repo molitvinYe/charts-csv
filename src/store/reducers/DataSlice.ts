@@ -75,9 +75,13 @@ export const dataSlice = createSlice({
     },
 
     setDataRange(state, action: PayloadAction<string[]>) {
+      const dateRangeFilter = state.dateRange.all.filter((date: string) => 
+        Number(date) >= Number(action.payload[0]) 
+        && Number(date) <= Number(action.payload[1]))
+
       state.dateRange = {
         ...state.dateRange,
-        filter: action.payload
+        filter: dateRangeFilter
       }
     },
 
